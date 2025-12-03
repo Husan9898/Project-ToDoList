@@ -4,7 +4,7 @@ import 'package:myapp/screens/home_page.dart';
 void main(){
   runApp(MainApp());
 }
-
+~
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
 
