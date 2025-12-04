@@ -1,10 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/firebase_options.dart';
 import 'package:myapp/screens/home_page.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main(){
+
+void main() async{
+  //initialize flutter widget binding
+
+  WidgetsFlutterBinding.ensureInitialized();
+
+  //initialize Firebase with default
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  //run app
   runApp(MainApp());
 }
-~
+
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
 
