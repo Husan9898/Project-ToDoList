@@ -7,7 +7,7 @@ class Task {
   factory Task.fromMap(String id, Map<String, dynamic> data) {
     return Task(
       id: id,
-      name: data ['name'],
+      name: data ['name'] ??  '',
       completed: data ['completed'],
     );
 
