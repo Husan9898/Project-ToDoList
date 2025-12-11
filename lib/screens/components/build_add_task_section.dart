@@ -1,5 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/services/task_service.dart';
 
-Widget buildAddTaskSection(nameController, Function(String) addTask) {
-  return Container(decoration: BoxDecoration(color: Colors.white));
+Widget buildAddTaskSection(
+  TextEditingController nameController,
+  VoidCallback addTask,
+) {
+  return Container(
+    decoration: BoxDecoration(color: Colors.white),
+    child: Padding(
+      padding: const EdgeInsets.all(1.0),
+      child: Row(
+        children: [
+          Expanded(
+            child: Container(
+              child: TextField(
+                maxLength: 32,
+                controller: nameController,
+                decoration: const InputDecoration(
+                  labelText: 'Add Task',
+                  border: OutlineInputBorder(),
+                ),
+              ),
+            ),
+          ),
+          ElevatedButton(onPressed: addTask, child: Text("Add Task")),
+        ],
+      ),
+    ),
+  );
 }
