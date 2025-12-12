@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/services/task_service.dart';
 
+// This widget creates the input section where the user types a task
+// It takes a controller for the text field and a function to add the task
 Widget buildAddTaskSection(
   TextEditingController nameController,
   VoidCallback addTask,

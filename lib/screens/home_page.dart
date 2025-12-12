@@ -45,6 +45,9 @@ class _HomePageState extends State<HomePage> {
             firstDay: DateTime(2025),
             lastDay: DateTime(2027),
           ),
+
+
+          // Task list (shows tasks on the screen)
           Consumer<TaskProvider>(
             builder: (context, taskProvider, child) {
               return buildTaskList(
@@ -54,6 +57,8 @@ class _HomePageState extends State<HomePage> {
               );
             },
           ),
+
+          // Section to add new tasks
           Consumer<TaskProvider>(
             builder: (context, taskProvider, child) {
               return buildAddTaskSection(nameController, () async {

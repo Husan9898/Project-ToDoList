@@ -4,7 +4,8 @@ import 'package:myapp/models/task_model.dart';
 
 class TaskService {
   final FirebaseFirestore db = FirebaseFirestore.instance;
-  final List<Task> tasks = [];
+  final List<Task> tasks = []; // Local list (not used for storage)
+
 
   //fetch all teh tasks from the database and convert them to a list of objects
   Future<List<Task>> fetchtasks() async {
@@ -30,6 +31,8 @@ class TaskService {
     await db.collection('task').doc(id).update({'completed': completed});
   }
 
+
+// Delete a task from firestore using its ID.
   Future<void> deleteTask(String id) async {
     await db.collection('tasks').doc(id).delete();
   }

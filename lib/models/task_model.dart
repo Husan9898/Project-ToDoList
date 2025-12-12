@@ -1,4 +1,6 @@
 // data model for tasks
+// This Task class represent a to-do item (id, name, completed) and
+//from map creates a task object from database / API data.
 
 class Task {
   final String id;

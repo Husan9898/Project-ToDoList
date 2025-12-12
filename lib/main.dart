@@ -11,6 +11,7 @@ void main() async {
 
   //Initialize Firebase with default options
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  
   //run the app
   runApp(MainApp());
 }
@@ -21,6 +22,8 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
+
+      // Provides TaskProvider to the entire app 
       create: (context) => TaskProvider(),
       child: MaterialApp(home: HomePage()),
     );

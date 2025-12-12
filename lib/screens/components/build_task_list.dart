@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/models/task_model.dart';
 
+// This widget builds the full list of tasks.
+// It receives the tasks and functions to update or delete a task.
 Widget buildTaskList(
   List<Task> tasks,
   Function(int) removeTask,
